@@ -8,4 +8,5 @@ langchain-huggingface
 langchain-chroma
 langchain-unstructured
 unstructured
+unstructured[pdf]
 aiogram
