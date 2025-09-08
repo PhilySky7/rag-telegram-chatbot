@@ -1,0 +1,11 @@
+python-dotenv
+langchain
+langchain-community
+langchain-perplexity
+langchain-text-splitters
+sentence-transformers
+langchain-huggingface
+langchain-chroma
+langchain-unstructured
+unstructured
+aiogram
