@@ -10,3 +10,4 @@ langchain-unstructured
 unstructured
 unstructured[pdf]
 aiogram
+pydantic-settings
