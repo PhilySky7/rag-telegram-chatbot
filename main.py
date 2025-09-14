@@ -122,7 +122,7 @@ async def on_pdf(message: Message, state: FSMContext):
             pdf_path=dest,
             api_key=api_key,
             hf_api_key=HF_API_KEY,
-            persist_directory=os.path.join(settings.PERSIST_DIRECTORY, str(message.document.file_unique_id)),
+            persist_directory=os.path.join(settings.PERSIST_DIRECTORY, str(message.document.file)), 
             collection_name=f"user_{message.from_user.id}",
             prefer_endpoint=True,
             language="ru",
@@ -145,6 +145,7 @@ async def on_pdf(message: Message, state: FSMContext):
                 os.remove(dest)
         except Exception:
             pass
+        
 
 @router.message(Build.ready, F.text)
 async def on_query(message: Message, state: FSMContext):
