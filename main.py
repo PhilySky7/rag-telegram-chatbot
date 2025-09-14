@@ -122,7 +122,7 @@ async def on_pdf(message: Message, state: FSMContext):
             pdf_path=dest,
             api_key=api_key,
             hf_api_key=HF_API_KEY,
-            persist_directory=os.path.join(settings.PERSIST_DIRECTORY, str(message.document.file)), 
+            persist_directory=os.path.join(settings.PERSIST_DIRECTORY, str(message.from_user.id)), 
             collection_name=f"user_{message.from_user.id}",
             prefer_endpoint=True,
             language="ru",
